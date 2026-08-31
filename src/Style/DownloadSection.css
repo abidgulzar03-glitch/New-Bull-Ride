@@ -1,0 +1,368 @@
+/* --------------Downaload Section Css Start--------------- */
+
+
+
+.downaload_section {
+  position: relative;
+  margin-top: 180px;
+}
+
+.downaload_section .container {
+  position: relative;
+}
+
+.downaload_section .background_slider {
+  padding: 150px 0;
+}
+
+.downaload_section .center_screen .img img {
+  width: 520px;
+  max-width: 100%;
+  margin-top: 578px;
+}
+
+.downaload_section .yellow_dotes {
+  position: absolute;
+  top: 64%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 490px;
+}
+
+.downaload_section .yellow_dotes img {
+  width: 850px;
+}
+
+.text_block span {
+  color: var(--text-white);
+  font-size: 36px;
+  font-family: var(--font-bebas);
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.text_block .mark_star {
+  margin: 0 40px;
+  font-family: "Playball", cursive;
+}
+
+.downaload_section .dowanload_slider .downlist {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.downaload_section .dowanload_slider .text_block span {
+  position: relative;
+  color: #ddd8cf;
+}
+
+.downaload_section .dowanload_slider {
+  transform: rotate(-1.5deg);
+  padding: 20px 0;
+}
+
+.downaload_section .center_screen {
+  text-align: center;
+  z-index: 999;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
+}
+
+.downaload_section .app_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.downaload_section .app_btn li a {
+  display: block;
+  padding: 15px 35px;
+  background-color: var(--black);
+  border: none;
+  position: relative;
+  border-radius: 12px;
+  transition: 0.4s all;
+}
+
+.downaload_section .app_btn li:last-child {
+  margin-left: 25px;
+}
+
+.downaload_section .app_btn li a img {
+  transition: 0.4s all;
+  height: 36px;
+}
+
+.downaload_section .slider_block .marquee_track {
+  display: flex;
+  width: max-content;
+  animation: marquee_scroll 18s linear infinite;
+}
+
+.downaload_section .slider_block:hover .marquee_track {
+  animation-play-state: paused;
+}
+
+.downaload_section .slider_block .item {
+  display: flex;
+}
+
+@keyframes marquee_scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .downaload_section .slider_block .marquee_track {
+    animation: none;
+  }
+}
+
+/* ---------- Tablet View (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+  .downaload_section {
+    margin-top: 150px;
+  }
+
+  .downaload_section .background_slider {
+    padding: 100px 0;
+  }
+
+  .downaload_section .center_screen {
+    margin-top: 15px;
+  }
+
+  .downaload_section .yellow_dotes {
+    margin-top: 15px;
+  }
+
+  .downaload_section .center_screen .img img {
+    width: 380px;
+    margin-top: 420px; /* FIX: was stuck at desktop's 578px */
+  }
+
+  .downaload_section .yellow_dotes img {
+    width: 600px;
+  }
+
+  .text_block span {
+    font-size: 28px;
+  }
+
+  .text_block .mark_star {
+    margin: 0 30px;
+  }
+
+  .downaload_section .app_btn li a {
+    padding: 12px 28px;
+  }
+
+  .downaload_section .app_btn li a img {
+    height: 30px;
+  }
+}
+
+/* ---------- Small Tablet / Large Phone View (max-width: 900px) ---------- */
+@media (max-width: 900px) {
+  .downaload_section {
+    margin-top: 120px;
+  }
+
+  .downaload_section .background_slider {
+    padding: 85px 0;
+  }
+
+  .downaload_section .center_screen {
+    margin-top: 12px;
+  }
+
+  .downaload_section .yellow_dotes {
+    margin-top: 12px;
+  }
+
+  .downaload_section .center_screen .img img {
+    width: 320px;
+    margin-top: 350px;
+  }
+
+  .downaload_section .yellow_dotes img {
+    width: 480px;
+  }
+
+  .text_block span {
+    font-size: 24px;
+  }
+
+  .text_block .mark_star {
+    margin: 0 24px;
+  }
+
+  .downaload_section .app_btn li a {
+    padding: 13px 26px;
+  }
+
+  .downaload_section .app_btn li a img {
+    height: 28px;
+  }
+}
+
+/* ========== Mobile View (max-width: 767px) ========== */
+@media (max-width: 767px) {
+
+  .downaload_section {
+    margin-top: 100px;   /* gradual step down from 150px, not a cliff to 20px */
+    overflow: hidden;
+  }
+
+  .downaload_section .container {
+    padding: 0 20px;
+  }
+
+  .downaload_section .background_slider {
+    padding: 70px 0 220px;
+  }
+
+  .downaload_section .center_screen {
+    top: 60%;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 10px;
+  }
+
+  .downaload_section .center_screen .img img {
+    width: 260px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 330px; /* bumped up for mobile spacing */
+  }
+
+  .downaload_section .yellow_dotes {
+    top: 60%;
+    margin-top: 10px;
+  }
+
+  .downaload_section .yellow_dotes img {
+    width: 380px;
+    max-width: 95%;
+    margin-top: 40px; /* added spacing above yellow dots image */
+  }
+
+  .text_block span {
+    font-size: 22px;
+  }
+
+  .text_block .mark_star {
+    margin: 0 18px;
+  }
+
+  .downaload_section .app_btn {
+    gap: 14px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .downaload_section .app_btn li a {
+    padding: 14px 22px;
+  }
+
+  .downaload_section .app_btn li a img {
+    height: 28px;
+  }
+}
+  
+@media (max-width: 600px) {
+  .downaload_section {
+    margin-top: 80px;
+  }
+ 
+  .downaload_section .background_slider {
+    padding: 60px 0 195px;
+  }
+ 
+  .downaload_section .center_screen {
+    margin-top: 19px;
+  }
+ 
+  .downaload_section .yellow_dotes {
+    margin-top: 19px;
+  }
+ 
+  .text_block span {
+    font-size: 19px;
+  }
+ 
+  .text_block .mark_star {
+    margin: 0 13px;
+  }
+ 
+  .downaload_section .app_btn {
+    gap: 12px;
+    margin-top: 24px;
+  }
+ 
+  .downaload_section .app_btn li a {
+    padding: 12px 20px;
+  }
+ 
+  .downaload_section .app_btn li a img {
+    height: 26px;
+  }
+}
+ 
+/* ========== Small Mobile View (max-width: 480px) ========== */
+@media (max-width: 480px) {
+ 
+  .downaload_section {
+    margin-top: 60px;
+  }
+ 
+  .downaload_section .background_slider {
+    padding: 50px 0 170px;
+  }
+ 
+  .downaload_section .center_screen {
+    margin-top: 38px;
+  }
+ 
+  .downaload_section .yellow_dotes {
+    margin-top: 218px;
+  }
+ 
+  .text_block span {
+    font-size: 17px;
+  }
+ 
+  .text_block .mark_star {
+    margin: 0 10px;
+  }
+ 
+  .downaload_section .app_btn {
+    flex-direction: row;
+    gap: 9px;
+    margin-top: 30px;
+  }
+ 
+  .downaload_section .app_btn li:last-child {
+    margin-left: 0;
+  }
+ 
+  .downaload_section .app_btn li a {
+    padding: 11px 18px;
+  }
+ 
+  .downaload_section .app_btn li a img {
+    height: 24px;
+  }
+}
+ 

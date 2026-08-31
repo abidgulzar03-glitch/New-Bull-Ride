@@ -1,0 +1,308 @@
+/* -------------How It Work Section Css Start------------- */
+
+
+
+.how_it_section {
+  position: relative;
+  padding: 60px 15px;
+  background-color: #fdf3e7;
+}
+
+.how_it_inner {
+  max-width: 1370px;
+  margin: 0 auto;
+  background-color: var(--dark-black);
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    rgba(120, 140, 255, 0.35) 0%,
+    rgba(18, 18, 28, 0) 45%
+  );
+  padding: 100px 0;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.how_it_inner .dotes_blue {
+  position: absolute;
+  top: -65%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.how_it_inner .section_title {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.how_it_inner .section_title .title_badge {
+  display: inline-block;
+  background-color: var(--primery);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+}
+
+.how_it_inner .section_title h2 {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.how_it_inner .row {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.how_it_inner .col-md-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding: 0 15px;
+}
+
+.how_it_inner .steps_block {
+  text-align: center;
+  position: relative;
+}
+
+.how_it_inner .steps_block .icon {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: var(--light-yellow);
+  margin: 0 auto;
+}
+
+.how_it_inner .steps_block .icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.how_it_inner .steps_block .text {
+  margin-top: 25px;
+}
+
+.how_it_inner .steps_block .text h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.how_it_inner .steps_block .text .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  margin: 10px 0 20px 0;
+  padding: 0;
+}
+
+.how_it_inner .steps_block .text .social li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--bg-white);
+  border-radius: 100px;
+  color: var(--text-white);
+  font-size: 15px;
+  transition: 0.4s all;
+}
+
+.how_it_inner .steps_block .text .social li a:hover {
+  background-color: var(--primery);
+  border-color: var(--primery);
+}
+
+.how_it_inner .steps_block .text .tag_text {
+  min-height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b9bac2;
+  font-size: 14px;
+  margin: 6px 0 18px 0;
+}
+
+.how_it_inner .steps_block .text p {
+  color: #b9bac2;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.how_it_inner .steps_block .step {
+  width: 40px;
+  height: 40px;
+  border: 1px dashed var(--dark-greay);
+  color: var(--dark-greay);
+  text-align: center;
+  line-height: 38px;
+  font-size: 13px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 100px;
+  margin-top: 30px;
+  position: relative;
+  background-color: var(--dark-black);
+  z-index: 2;
+}
+
+.how_it_inner .steps_block.step_border::after {
+  content: "";
+  position: absolute;
+  left: calc(50% + 45px);
+  bottom: 20px;
+  width: calc(100% - 60px);
+  height: 1px;
+  border-bottom: 1px dashed var(--dark-greay);
+  z-index: 1;
+}
+
+.how_it_inner .text-center {
+  text-align: center;
+}
+
+.how_it_inner .text-center .btn_block {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.how_it_inner .btn.puprple_btn {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 50px;
+  padding: 0 34px;
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.how_it_inner .btn.puprple_btn:hover {
+  background-color: #c62828;
+  transform: translate(4px, 4px);
+}
+
+.how_it_inner .btn.puprple_btn:active {
+  transform: translate(3px, 3px);
+}
+
+.how_it_inner .btn_bottom {
+  position: absolute;
+  width: 96%;
+  height: 96%;
+  top: 6px;
+  left: 8px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 991px) {
+
+  .how_it_inner .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .how_it_inner .steps_block.step_border::after {
+    display: none;
+  }
+
+  .how_it_inner .steps_block .step {
+    margin-top: 20px;
+  }
+
+  /* Button */
+  .how_it_inner .text-center .btn_block {
+    width: 230px;
+    margin: 35px auto 0;
+    position: relative;
+    display: block;
+  }
+
+  .how_it_inner .btn.puprple_btn,
+  .how_it_inner .btn_bottom {
+    width: 230px;
+    height: 52px;
+  }
+
+  .how_it_inner .btn_bottom {
+    top: 6px;
+    left: 6px;
+    border: 1px solid #e53935;
+    background: transparent;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 576px) {
+
+   .how_it_section {
+    padding: 60px 5px;
+  }
+
+  .how_it_inner {
+    margin: 0;
+    padding: 60px 20px;
+    border-radius: 20px;
+    max-width: 100%;
+  }
+
+  .how_it_inner .text-center .btn_block {
+    width: 200px;
+    margin: 30px auto 0;
+    position: relative;
+    display: block;
+  }
+
+  .how_it_inner .btn.puprple_btn,
+  .how_it_inner .btn_bottom {
+    width: 200px;
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .how_it_inner .btn.puprple_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .how_it_inner .btn_bottom {
+    top: 5px;
+    left: 5px;
+    border: 1px solid #e53935;
+    background: transparent;
+  }
+}

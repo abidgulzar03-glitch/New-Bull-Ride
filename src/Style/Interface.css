@@ -1,0 +1,203 @@
+
+
+/* interface wraper */
+.interface_section .screen_slider {
+  margin-top: 35px;
+  min-height: 460px;
+  position: relative;
+}
+
+.interface_section .owl-carousel {
+  position: relative;
+}
+
+.interface_section .owl-track {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 25%;
+}
+
+.interface_section .owl-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* interface images */
+.interface_section .owl-item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+
+.interface_section .owl-item .screen_frame_img img {
+  transform: scale(0.9);
+  border: 2px solid #000;
+  border-radius: 20px;
+  transition: 1s all;
+  margin: 0 auto;
+  display: block;
+  max-height: 480px;
+}
+
+.interface_section .owl-item.center .screen_frame_img img {
+  transform: scale(1);
+  border: 3px solid #000;
+}
+
+.interface_section .owl-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: 1px solid var(--dark-greay);
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.4s all;
+  z-index: 2;
+}
+
+.interface_section .owl-nav button span {
+  color: var(--dark-greay);
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.interface_section .owl-nav .owl-prev {
+  left: 10px;
+}
+
+.interface_section .owl-nav .owl-next {
+  right: 10px;
+}
+
+.interface_section .owl-nav button:hover {
+  background-color: var(--primery);
+  border-color: var(--primery);
+}
+
+.interface_section .owl-nav button:hover span {
+  color: var(--bg-white);
+}
+
+.interface_section .owl-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.interface_section .owl-dots .owl-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--primery);
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.interface_section .owl-dots .owl-dot.active {
+  background-color: var(--primery);
+}
+
+/* ---------Key Feature Section Css Start---------- */
+.key_feature_section {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.key_innner {
+  background: var(--dark-black);
+  max-width: 1370px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.key_innner .dotes_blue {
+  position: absolute;
+  top: -55%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.key_innner .section_title {
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.key_innner .section_title h2 {
+  color: var(--text-white);
+}
+
+.feature_box {
+  text-align: center;
+  background-color: var(--text-white);
+  padding: 40px 40px 0 40px;
+  border-radius: 20px;
+}
+
+.feature_box h3 {
+  color: var(--primery);
+}
+
+.feature_box .img {
+  margin-top: 40px;
+}
+
+.key_innner .owl-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  border: 1px solid var(--dark-greay) !important;
+  transition: 0.4s all;
+}
+
+.key_innner .owl-nav button span {
+  color: var(--dark-greay);
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.key_innner .owl-nav button.owl-prev {
+  left: -50px;
+}
+
+.key_innner .owl-nav button.owl-next {
+  right: -50px;
+}
+
+.key_innner .owl-nav button:hover {
+  background-color: var(--bg-white);
+  border-color: var(--bg-white);
+}
+
+.key_innner .owl-nav button:hover span {
+  color: var(--primery);
+}
+
+@media (max-width: 768px) {
+  .interface_section .owl-track {
+    padding: 0 10%;
+    gap: 15px;
+  }
+
+  .interface_section .owl-nav button {
+    width: 34px;
+    height: 34px;
+  }
+}

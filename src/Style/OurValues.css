@@ -1,0 +1,350 @@
+/* ========================================
+   OUR VALUES SECTION
+======================================== */
+
+.our_value_section {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+/* Yellow dots background */
+
+.our_value_section::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -100px;
+
+  transform: translateX(-50%);
+
+  background-image: url("/yellow_dotes_tr.png");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 100%;
+  height: 410px;
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   SECTION TITLE
+======================================== */
+
+.our_value_section .section_title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title_badge {
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  border-radius: 30px;
+
+  background: var(--primery);
+
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.section_title h2 {
+  margin-top: 15px;
+
+  font-size: 42px;
+  line-height: 1.2;
+
+  color: var(--dark-black);
+}
+
+.section_title h2 span {
+  color: var(--primery);
+}
+
+
+/* ========================================
+   VALUE SLIDER
+======================================== */
+
+.our_value_section .value_slider {
+  margin-top: 50px;
+}
+
+.our_value_section .value_slider .value_block {
+  background-color: var(--bg-white);
+
+  padding: 50px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ========================================
+   VALUE ICON
+======================================== */
+
+.our_value_section
+.value_slider
+.value_block
+.icon {
+
+  width: 90px;
+  aspect-ratio: 1 / 1;
+
+  border-radius: 20px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primery);
+
+  margin: 0 auto 30px;
+}
+
+.our_value_section
+.value_slider
+.value_block
+.icon img {
+
+  width: 50px;
+  height: 50px;
+
+  object-fit: contain;
+}
+
+
+/* ========================================
+   VALUE TEXT
+======================================== */
+
+.our_value_section
+.value_slider
+.value_block h3 {
+
+  color: var(--primery);
+
+  margin-bottom: 15px;
+
+  font-size: 22px;
+}
+
+.our_value_section
+.value_slider
+.value_block p {
+
+  margin-bottom: 0;
+
+  color: var(--black);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   OWL NAVIGATION
+======================================== */
+
+.our_value_section .owl-nav button {
+
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 35px;
+  height: 35px;
+
+  border-radius: 100px;
+
+  border: 1px solid var(--greay) !important;
+
+  background: transparent !important;
+
+  transition: 0.4s all;
+}
+
+.our_value_section .owl-nav button span {
+
+  color: var(--greay);
+
+  font-size: 22px;
+
+  line-height: 1;
+}
+
+.our_value_section .owl-nav button.owl-prev {
+  left: -50px;
+}
+
+.our_value_section .owl-nav button.owl-next {
+  right: -50px;
+}
+
+.our_value_section .owl-nav button:hover {
+  background-color: var(--bg-white) !important;
+
+  border-color: var(--bg-white) !important;
+}
+
+.our_value_section .owl-nav button:hover span {
+  color: var(--primery);
+}
+
+
+/* ========================================
+   TEXT LIST SECTION
+======================================== */
+
+.text_list_section {
+
+  position: relative;
+
+  padding: 60px 0;
+
+  overflow: hidden;
+}
+
+.text_list_section .container {
+  margin-bottom: 30px;
+}
+
+.text_list_section .title_badge {
+  margin-left: 0;
+}
+
+
+/* ========================================
+   TEXT FLOW SLIDER
+======================================== */
+
+.text_list_section .slider_block {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.text_list_section .text_block {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  white-space: nowrap;
+}
+
+.text_list_section .text_block span:first-child {
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color: var(--dark-black);
+}
+
+.text_list_section .mark_star {
+
+  font-size: 28px;
+
+  color: var(--primery);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767px) {
+
+  .our_value_section {
+    padding: 60px 15px;
+  }
+
+  .section_title h2 {
+    font-size: 32px;
+  }
+
+  .our_value_section
+  .value_slider
+  .value_block {
+
+    padding: 35px 20px;
+  }
+
+  .our_value_section .owl-nav button.owl-prev {
+    left: 0;
+  }
+
+  .our_value_section .owl-nav button.owl-next {
+    right: 0;
+  }
+
+  .text_list_section {
+    padding: 40px 15px;
+  }
+
+  .text_list_section
+  .text_block
+  span:first-child {
+
+    font-size: 18px;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+
+  .section_title h2 {
+    font-size: 28px;
+  }
+
+  .our_value_section
+  .value_slider
+  .value_block {
+
+    padding: 30px 18px;
+  }
+
+  .our_value_section
+  .value_slider
+  .value_block
+  .icon {
+
+    width: 75px;
+    margin-bottom: 20px;
+  }
+
+  .our_value_section
+  .value_slider
+  .value_block h3 {
+
+    font-size: 19px;
+  }
+}

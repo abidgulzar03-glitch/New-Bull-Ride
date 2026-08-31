@@ -1,0 +1,148 @@
+:root {
+  --bg-white: #ffffff;
+}
+
+.our_client {
+  position: relative;
+  padding: 60px 15px;
+}
+
+.our_client .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.our_client::before,
+.our_client::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100px;
+  background-image: url(yellow_dotes_tr.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 410px;
+  background-position: center;
+  z-index: -1;
+}
+
+.our_client .section_title {
+  text-align: center;
+}
+
+.our_client .section_title .title_badge {
+  display: inline-block;
+  background-color: red;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+}
+
+.our_client .section_title h2 {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 0;
+  color: #14142b;
+}
+
+.our_client .section_title h2 .d-block {
+  display: block;
+}
+
+.our_client .client_list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+  padding: 0;
+}
+
+.our_client .client_list .client_logo {
+  background-color: var(--bg-white);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 86px;
+}
+
+.our_client .client_list .client_logo img {
+  width: 150px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .our_client .client_list {
+    gap: 18px;
+  }
+
+  .our_client .client_list .client_logo {
+    padding: 14px;
+  }
+
+  .our_client .client_list .client_logo img {
+    width: 110px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .our_client {
+    padding: 60px 0;
+  }
+
+  .our_client .container {
+    padding: 0;
+  }
+
+
+  .pricing_inner .section_title h2 {
+    font-size: 28px;
+  }
+
+  .pricing_inner .pannel_block {
+    padding: 35px 25px;
+  }
+
+  /* Perfect Mobile Button */
+  .pricing_inner .btn_block {
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pricing_inner .btn.puprple_btn {
+    width: 100%;
+    height: 48px;
+    padding: 0;
+    font-size: 15px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pricing_inner .btn_bottom {
+    width: 100%;
+    height: 48px;
+    top: 5px;
+    left: 5px;
+    border: 1px solid var(--primery);
+    border-radius: 50px;
+    background: transparent;
+  }
+}
