@@ -75,7 +75,7 @@
 }
 
 .nav-item > a:hover {
-  color: #3f67f3;
+  color: red;
 }
 
 
@@ -95,7 +95,7 @@
 }
 
 .dropdown:hover .dropdown-arrow {
-  color: #3f67f3;
+  color:red;
 }
 
 .dropdown-menu {
@@ -113,7 +113,7 @@
   background: #fff;
 
   border-radius: 0 0 10px 10px;
-  border-bottom: 3px solid #3f67f3;
+  border-bottom: 3px solid red;
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 

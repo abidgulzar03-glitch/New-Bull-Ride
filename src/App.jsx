@@ -13,6 +13,7 @@ import ScreenSlider from "./Components/ScreenSlider.jsx";
 import Downloadsection from "./Components/Downloadsection";
 import Blog from "./Components/Blog";
 import Footer from "./Components/Footer";
+
 function App() {
   return (
     <>

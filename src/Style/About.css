@@ -89,7 +89,7 @@
   height: 160px;
   border-radius: 50%;
   background: #fff;
-  border: 1px solid #6c63ff;
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,7 +103,7 @@
 
 .app_statstic .text p:first-child span {
   font-size: 34px;
-  color: #6c63ff;
+  color: red;
 }
 
 .abtImg img {
@@ -135,7 +135,7 @@
 .video_overlay {
   position: absolute;
   inset: 0;
-  background: rgba(37, 74, 255, 0.65);
+  background:rgba(255, 0, 0, 0.737);
 }
 
 .play_wrapper {

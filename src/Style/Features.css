@@ -111,6 +111,7 @@
 
 .our_value_section .value_slider .value_block .icon {
   width: 90px;
+  height: 90px;
   aspect-ratio: 1;
   border-radius: 20px;
   background: var(--primery);
