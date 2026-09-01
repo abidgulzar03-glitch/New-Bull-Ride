@@ -9,12 +9,12 @@ const stats = [
   { value: 8, suffix: "M+", label: "Followers" },
   { value: 17, suffix: "M+", label: "Download" },
 ];
-const aboutSlides = [1, 2, 3, 4, 5, 4].map((n) => `/public/abtslide_${n}.png`);
+const aboutSlides = [1, 2, 3, 4, 5, 4].map((n) => `/abtslide_${n}.png`);
 const aboutSlidesLoop = [...aboutSlides, ...aboutSlides];
 const values = [
-  { icon: "/public/ourvalue_1.png", title: "Skilled Team", text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has." },
-  { icon: "/public/ourvalue_2.png", title: "Creative Thinking", text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has." },
-  { icon: "/public/ourvalue_3.png", title: "Growth Support", text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has." },
+  { icon: "/ourvalue_1.png", title: "Skilled Team", text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has." },
+  { icon: "/ourvalue_2.png", title: "Creative Thinking", text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has." },
+  { icon: "/ourvalue_3.png", title: "Growth Support", text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has." },
 ];
 const flowWords = [
   "Multiple campaigns", "User friendly", "Advanced analytics",
@@ -122,9 +122,7 @@ function AboutUS() {
       offset: 80,
     });
 
-    // Recalculate trigger offsets once images/layout have actually settled,
-    // so a hard refresh doesn't lock in stale positions and skip the
-    // on-scroll animation.
+  
     const refreshAOS = () => AOS.refresh();
 
     window.addEventListener("load", refreshAOS);
@@ -436,7 +434,7 @@ function AboutUS() {
               <div className="client_track">
                 {clients.map((c) => (
                   <div className="img" key={c}>
-                    <img src={`public/${c}.png`} alt={c} />
+                    <img src={`/${c}.png`} alt={c} />
                   </div>
                 ))}
               </div>
