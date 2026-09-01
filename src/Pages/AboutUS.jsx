@@ -30,13 +30,42 @@ const team = [
 
 const clients = ["paypal", "spoty", "shopboat", "slack", "envato", "jquery", "woocommerce", "themeforest"];
 
+const testimonials = [
+  {
+    img: "/testimonial_01.png",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the standard dummy.",
+    name: "Willium Joy,",
+    company: "Smartbrain Tech",
+  },
+  {
+    img: "/testimonial_02.png",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the standard dummy.",
+    name: "John Due,",
+    company: "Corporate Agency",
+  },
+  {
+    img: "/testimonial_03.png",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the standard dummy.",
+    name: "Maria,",
+    company: "Company Inc",
+  },
+];
+
+const faqCategories = ["Genral", "Pricing", "Account", "Returns Policy", "Technical Support"];
+
 const faqs = [
-  { q: "How app will useful for my business ?", a: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer." },
-  { q: "What support i will get in premium package?", a: "Some placeholder content for the second accordion panel." },
-  { q: "Can i get update for free ?", a: "And lastly, the placeholder content for the third and final accordion panel." },
-  { q: "How to setup account ?", a: "Some placeholder content for the second accordion panel." },
-  { q: "Is there any hidden cost?", a: "Some placeholder content for the second accordion panel." },
-  { q: "What is process to get refund ?", a: "And lastly, the placeholder content for the third and final accordion panel." },
+  { category: "Genral", q: "How app will useful for my business ?", a: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer." },
+  { category: "Genral", q: "What support i will get in premium package?", a: "Some placeholder content for the second accordion panel." },
+  { category: "Genral", q: "Can i get update for free ?", a: "And lastly, the placeholder content for the third and final accordion panel." },
+  { category: "Genral", q: "How to setup account ?", a: "Some placeholder content for the second accordion panel." },
+  { category: "Genral", q: "Is there any hidden cost?", a: "Some placeholder content for the second accordion panel." },
+  { category: "Genral", q: "What is process to get refund ?", a: "And lastly, the placeholder content for the third and final accordion panel." },
+  { category: "Pricing", q: "Is there any discount on packages ?", a: "Some placeholder content for a pricing accordion panel." },
+  { category: "Pricing", q: "Can i change my plan later ?", a: "Some placeholder content for a pricing accordion panel." },
+  { category: "Account", q: "How do i reset my password ?", a: "Some placeholder content for an account accordion panel." },
+  { category: "Account", q: "Can i delete my account ?", a: "Some placeholder content for an account accordion panel." },
+  { category: "Returns Policy", q: "What is your returns policy ?", a: "Some placeholder content for a returns policy accordion panel." },
+  { category: "Technical Support", q: "How do i contact technical support ?", a: "Some placeholder content for a technical support accordion panel." },
 ];
 
 function useCounters(items) {
@@ -81,6 +110,9 @@ function AboutUS() {
   const { ref: statsRef, counts } = useCounters(stats);
   const [openFaq, setOpenFaq] = useState(0);
   const [videoOpen, setVideoOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState("Genral");
+  const [activeTesti, setActiveTesti] = useState(0);
+  const testiPausedRef = useRef(false);
 
   useEffect(() => {
     AOS.init({
@@ -89,6 +121,38 @@ function AboutUS() {
       once: true,
       offset: 80,
     });
+
+    // Recalculate trigger offsets once images/layout have actually settled,
+    // so a hard refresh doesn't lock in stale positions and skip the
+    // on-scroll animation.
+    const refreshAOS = () => AOS.refresh();
+
+    window.addEventListener("load", refreshAOS);
+    window.addEventListener("resize", refreshAOS);
+
+    const images = document.querySelectorAll("img");
+    images.forEach((img) => {
+      if (!img.complete) {
+        img.addEventListener("load", refreshAOS);
+      }
+    });
+
+    return () => {
+      window.removeEventListener("load", refreshAOS);
+      window.removeEventListener("resize", refreshAOS);
+      images.forEach((img) => {
+        img.removeEventListener("load", refreshAOS);
+      });
+    };
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!testiPausedRef.current) {
+        setActiveTesti((prev) => (prev + 1) % testimonials.length);
+      }
+    }, 4000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -251,6 +315,7 @@ function AboutUS() {
             <div className="col-md-6" data-aos="fade-up" data-aos-delay="150">
               <div className="img video_player">
                 <img src="/process.png" alt="" />
+                <span className="sparkle sparkle_2"></span>
                 <button className="play-button play_icon" onClick={() => setVideoOpen(true)}>
                   <img src="/play_white.svg" alt="Play" />
                 </button>
@@ -294,6 +359,7 @@ function AboutUS() {
             <div className="col-md-6" data-aos="fade-up" data-aos-delay="150">
               <div className="img">
                 <img src="/communication.png" alt="" />
+                <span className="sparkle sparkle_2"></span>
               </div>
             </div>
           </div>
@@ -328,28 +394,42 @@ function AboutUS() {
         </div>
         <div className="testimonial_inner">
           <div className="container">
-            <div className="testimonial_box" data-aos="fade-up">
-              <div className="testi_img">
-                <img className="user_img" src="/testimonial_01.png" alt="" />
-                <button className="play-button play_icon" onClick={() => setVideoOpen(true)}>
-                  <img src="/play_white.svg" alt="Play" />
-                </button>
-              </div>
-              <div className="testi_text">
-                <div className="star">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <span key={i}><i className="icofont-star"></i></span>
-                  ))}
+            <div
+              className="testimonial_slider"
+              data-aos="fade-up"
+              onMouseEnter={() => (testiPausedRef.current = true)}
+              onMouseLeave={() => (testiPausedRef.current = false)}
+            >
+              <div className="testimonial_box">
+                <div className="testi_img">
+                  <img className="user_img" src={testimonials[activeTesti].img} alt="" />
+                  <button className="play-button play_icon" onClick={() => setVideoOpen(true)}>
+                    <img src="/play_white.svg" alt="Play" />
+                  </button>
                 </div>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry lorem Ipsum has been the standard dummy.
-                </p>
-                <div className="user_info">
-                  <h3>Willium Joy,</h3>
-                  <span>Smartbrain Tech</span>
+                <div className="testi_text">
+                  <div className="star">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <span key={i}><i className="icofont-star"></i></span>
+                    ))}
+                  </div>
+                  <p>{testimonials[activeTesti].text}</p>
+                  <div className="user_info">
+                    <h3>{testimonials[activeTesti].name}</h3>
+                    <span>{testimonials[activeTesti].company}</span>
+                  </div>
                 </div>
               </div>
+            </div>
+
+            <div className="testi_dots">
+              {testimonials.map((_, i) => (
+                <span
+                  key={i}
+                  className={`dot ${activeTesti === i ? "active" : ""}`}
+                  onClick={() => setActiveTesti(i)}
+                ></span>
+              ))}
             </div>
 
             <div className="client_logo_slider" data-aos="fade-up">
@@ -400,28 +480,47 @@ function AboutUS() {
             <span className="title_badge">Question & Answer</span>
             <h2><span>FAQs</span> - Frequently Asked Questions</h2>
           </div>
+
+          {/* FAQ Category Tabs */}
+          <div className="faq_tabs" data-aos="fade-up">
+            {faqCategories.map((cat) => (
+              <button
+                key={cat}
+                className={`faq_tab_btn ${activeCategory === cat ? "active" : ""}`}
+                onClick={() => {
+                  setActiveCategory(cat);
+                  setOpenFaq(0);
+                }}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
           <div className="accordion">
             <div className="row">
-              {faqs.map((faq, i) => (
-                <div className="col-md-6" key={faq.q} data-aos="fade-up" data-aos-delay={(i % 2) * 100}>
-                  <div className="card">
-                    <div className="card-header">
-                      <button
-                        className={`accordion-btn ${openFaq === i ? "" : "collapsed"}`}
-                        onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                      >
-                        {faq.q}
-                        <span className="icons">
-                          <i className={openFaq === i ? "icofont-minus" : "icofont-plus"}></i>
-                        </span>
-                      </button>
+              {faqs
+                .filter((faq) => faq.category === activeCategory)
+                .map((faq, i) => (
+                  <div className="col-md-6" key={faq.q} data-aos="fade-up" data-aos-delay={(i % 2) * 100}>
+                    <div className="card">
+                      <div className="card-header">
+                        <button
+                          className={`accordion-btn ${openFaq === i ? "" : "collapsed"}`}
+                          onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                        >
+                          {faq.q}
+                          <span className="icons">
+                            <i className={openFaq === i ? "icofont-minus" : "icofont-plus"}></i>
+                          </span>
+                        </button>
+                      </div>
+                      {openFaq === i && (
+                        <div className="card-body">{faq.a}</div>
+                      )}
                     </div>
-                    {openFaq === i && (
-                      <div className="card-body">{faq.a}</div>
-                    )}
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         </div>
