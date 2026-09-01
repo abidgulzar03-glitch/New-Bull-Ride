@@ -98,7 +98,7 @@ function Header() {
               </span>
               <ul className="dropdown-menu">
                 <li>
-                  <a href="/blog">Blog List</a>
+                     <Link to="/blog">Blog List</Link>
                 </li>
                 <li>
                   <a href="/blog-detail">Single Blog</a>
