@@ -1,5 +1,4 @@
-import "./Style/DownloadSection.css";
-
+import "../Style/Downloadsection.css";
 const TextBlock = () => (
   <div className="text_block">
     <span>Download </span>
