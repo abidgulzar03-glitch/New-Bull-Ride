@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../Style/Header.css";
-
+import { Link } from "react-router-dom";
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -81,9 +81,8 @@ function Header() {
             </li>
 
             <li className="nav-item">
-              <a href="/about">About Us</a>
+              <Link to="/aboutUs">About Us</Link>
             </li>
-
             <li
               className={`nav-item dropdown ${openDropdown === 1 ? "active" : ""}`}
             >

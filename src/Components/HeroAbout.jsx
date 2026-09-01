@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "../Style/About.css";
+import "../Style/HeroAbout.css";
 
 const stats = [
   { value: 17, suffix: "M+", label: "Download" },
@@ -7,12 +7,10 @@ const stats = [
   { value: 150, suffix: "+", label: "Countries" },
   { value: 8, suffix: "M+", label: "Followers" },
 ];
-
 function About() {
   const sectionRef = useRef(null);
   const [counts, setCounts] = useState(stats.map(() => 0));
   const [played, setPlayed] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
