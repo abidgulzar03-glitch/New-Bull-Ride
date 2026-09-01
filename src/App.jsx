@@ -11,7 +11,7 @@ import Review from "./Components/Review";
 import Ourclients from "./Components/OurClients";
 import Pricing from "./Components/Pricing";
 import ScreenSlider from "./Components/ScreenSlider";
-import Downloadsection from "./Components/Downloadsection";
+import Downloadsection from "./Components/DownloadSection";
 import Blog from "./Components/Blog";
 import Footer from "./Components/Footer";
 import AboutUS from "./Pages/AboutUS";
