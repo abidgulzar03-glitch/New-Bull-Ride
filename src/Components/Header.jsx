@@ -101,13 +101,16 @@ function Header() {
                      <Link to="/blog">Blog List</Link>
                 </li>
                 <li>
-                  <a href="/blog-detail">Single Blog</a>
+                 
+                   <Link to="/blog-detail">Single Blog</Link>
                 </li>
                 <li>
-                  <a href="/sign-in">Sign In</a>
+                 
+                  <Link to="/sign-in">Sign In </Link>
+
                 </li>
                 <li>
-                  <a href="/sign-up">Sign Up</a>
+                 <Link to="/sign-up">Sign Up </Link>
                 </li>
               </ul>
             </li>
