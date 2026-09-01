@@ -32,8 +32,9 @@ function itemsForWidth(w) {
 
 function FeatureCarousel() {
   const [perView, setPerView] = useState(() =>
-    typeof window !== "undefined" ? itemsForWidth(window.innerWidth) : 3,
+    typeof window !== "undefined" ? itemsForWidth(window.innerWidth) : 3
   );
+
   const [index, setIndex] = useState(perView);
   const [withTransition, setWithTransition] = useState(true);
   const timerRef = useRef(null);
@@ -48,26 +49,22 @@ function FeatureCarousel() {
     return () => clearInterval(id);
   }, [perView]);
 
-  const slides = [
-    ...FEATURES.slice(-perView),
-    ...FEATURES,
-    ...FEATURES.slice(0, perView),
-  ];
-  // Track must be wide enough to hold every slide at full size —
-  // without this, flex-shrink squeezes all slides into one row.
-  const slideWidthPercent = 100 / slides.length;
-  const trackWidthPercent = (slides.length / perView) * 100;
-  const goTo = (i) => {
+  const next = () => {
     setWithTransition(true);
-    setIndex(i);
+    setIndex((prev) => prev + 1);
   };
-  const next = () => goTo(index + 1);
-  const prev = () => goTo(index - 1);
+
+  const stopAuto = () => clearInterval(timerRef.current);
+
+  const startAuto = () => {
+    clearInterval(timerRef.current);
+    timerRef.current = setInterval(next, 2800);
+  };
 
   useEffect(() => {
-    timerRef.current = setInterval(next, 3000);
-    return () => clearInterval(timerRef.current);
-  }, [index, perView]);
+    startAuto();
+    return stopAuto;
+  }, [perView]);
 
   const handleTransitionEnd = () => {
     if (index >= total + perView) {
@@ -78,21 +75,6 @@ function FeatureCarousel() {
       setIndex(index + total);
     }
   };
-
-  const startAuto = () => {
-    clearInterval(timerRef.current);
-    timerRef.current = setInterval(() => {
-      setIndex((prev) => prev + 1);
-      setWithTransition(true);
-    }, 2800);
-  };
-
-  const stopAuto = () => clearInterval(timerRef.current);
-
-  useEffect(() => {
-    startAuto();
-    return stopAuto;
-  }, [perView]);
 
   return (
     <div
@@ -117,24 +99,6 @@ function FeatureCarousel() {
           ))}
         </div>
       </div>
-      <div className="owl-nav">
-        <button
-          type="button"
-          className="owl-prev"
-          onClick={prev}
-          aria-label="Previous"
-        >
-          <span>‹</span>
-        </button>
-        <button
-          type="button"
-          className="owl-next"
-          onClick={next}
-          aria-label="Next"
-        >
-          <span>›</span>
-        </button>
-      </div>
     </div>
   );
 }
@@ -143,7 +107,7 @@ function Features() {
   return (
     <section className="our_value_section home_feature white_text row_am">
       <div className="dotes_blue">
-        <img src="/yellow_dots.png  " alt="" />
+        <img src="/yellow_dots.png" alt="" />
       </div>
 
       <div className="container">
@@ -155,6 +119,7 @@ function Features() {
           >
             Unique Features
           </span>
+
           <h2 data-aos="fade-up" data-aos-duration="1200">
             Powerful features
           </h2>

@@ -2,7 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./AboutUS.css";
-
+AOS.init({
+  duration: 1500,
+  once: false,       
+  mirror: true,       
+});
 const stats = [
   { value: 150, suffix: "+", label: "Countries" },
   { value: 2300, suffix: "+", label: "Reviews" }, 
@@ -15,6 +19,7 @@ const values = [
   { icon: "/ourvalue_1.png", title: "Skilled Team", text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has." },
   { icon: "/ourvalue_2.png", title: "Creative Thinking", text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has." },
   { icon: "/ourvalue_3.png", title: "Growth Support", text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has." },
+
 ];
 const flowWords = [
   "Multiple campaigns", "User friendly", "Advanced analytics",
@@ -275,7 +280,7 @@ function AboutUS() {
       <section className="row_am service_section about_service">
         <div className="container">
           <div className="row service_blocks">
-            <div className="col-md-6" data-aos="fade-up">
+            <div className="col-md-6" data-aos="fade-right">
               <div className="service_text">
                 <div className="service_badge">
                   <i className="icofont-gear"></i>
@@ -322,7 +327,7 @@ function AboutUS() {
           </div>
 
           <div className="row service_blocks flex-row-reverse">
-            <div className="col-md-6" data-aos="fade-up">
+            <div className="col-md-6" data-aos="fade-left">
               <div className="service_text right_side">
                 <div className="service_badge">
                   <i className="icofont-ui-messaging"></i>

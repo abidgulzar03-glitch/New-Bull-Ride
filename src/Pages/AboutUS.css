@@ -136,7 +136,7 @@
 .about-page .about_slider .slider_track {
   display: flex;
   width: max-content;
-  animation: aboutSlideScroll 25s linear infinite;
+  animation: aboutSlideScroll 30s linear infinite;
 }
 
 .about-page .about_slider .abt_slides {
@@ -215,6 +215,7 @@
   gap: 25px;
   margin-top: 40px;
   flex-wrap: wrap;
+  
 }
 
 .about-page .value_block {
