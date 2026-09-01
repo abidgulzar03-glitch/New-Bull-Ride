@@ -1,0 +1,488 @@
+/*
+  BlogList.css — extracted from style.css (.our_resource → .pagination_block)
+  Relies on CSS variables defined in :root in your global style.css
+  (--primery, --dark-black, --bg-white, --text-white, --text-greay, --black).
+  Make sure that global stylesheet is imported once in App.jsx / index.js
+  before this file, so those variables resolve correctly.
+*/
+
+/* ===========================
+   RESOURCE SECTION
+=========================== */
+
+/* ========================================
+   OUR RESOURCE SECTION
+======================================== */
+
+.our_resource{
+    padding: 80px 40px;
+    background: #f5f1e8;
+}
+
+.resource_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Left Content */
+
+.resource_left .title_badge{
+    display: inline-block;
+    background: #ff3b30;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.resource_left h2{
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 18px;
+}
+
+.resource_left h2 span{
+    color: #ff3b30;
+}
+
+.resource_left p{
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 500px;
+}
+
+/* Right Card */
+
+.mail_block{
+    position: relative;
+    background: #0d111b;
+    border-radius: 22px;
+    padding: 55px 40px;
+    overflow: hidden;
+    margin-top: 110px;
+}
+
+.dots_bg{
+    position: absolute;
+    inset: 0;
+    opacity: 0.9;
+}
+
+.dots_bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mail_content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.mail_icon{
+    width: 65px;
+    margin-bottom: 18px;
+}
+
+.mail_content h3{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sub_text{
+    color: #d7d7d7;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Email Input */
+
+.input_box{
+    position: relative;
+}
+
+.input_box input{
+    width: 100%;
+    height: 62px;
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+    padding: 0 75px 0 20px;
+    font-size: 16px;
+    outline: none;
+    color: #111;
+}
+
+.input_box input::placeholder{
+    color: #777;
+}
+
+.input_box button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 10px;
+    background: #ff3b30;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input_box button:hover{
+    background: #d92c22;
+}
+
+.note{
+    margin-top: 14px;
+    text-align: left;
+    color: #8b8f98;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Tablet */
+
+@media (max-width: 991px){
+
+
+     .our_resource{
+        padding: 160px 10px;
+    }
+    .resource_wrapper{
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .resource_left h2{
+        font-size: 38px;
+    }
+
+    .mail_block{
+        padding: 40px 25px;
+    }
+
+    .mail_content h3{
+        font-size: 26px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 576px){
+
+    .our_resource{
+        padding: 160px 10px;
+    }
+
+    .resource_left h2{
+        font-size: 32px;
+    }
+
+    .resource_left p{
+        font-size: 15px;
+    }
+
+    .sub_text{
+        font-size: 15px;
+    }
+
+    .input_box input{
+        height: 56px;
+        font-size: 15px;
+    }
+
+    .input_box button{
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+    }
+}
+
+/* ===========Articles Section Start===================== */
+/* =========================================
+   RECENT ARTICLES
+========================================= */
+/* =========================================
+   RECENT ARTICLES (RED THEME)
+========================================= */
+
+.articles_section{
+    padding: 90px 10px;
+    background: #f5f1e8;
+    position: relative;
+}
+
+/* Title */
+
+.articles_section .section_title{
+    text-align: left;
+}
+
+.articles_section .section_title h2{
+    font-size: 42px;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d4cec2;
+}
+
+.articles_section .section_title h2 span{
+    color: #ff3b30;
+}
+
+/* Filter */
+
+.filter_tags{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 25px 0 40px;
+    padding: 0;
+}
+
+.filter_tags li{
+    list-style: none;
+}
+
+.filter_tags li a{
+    display: block;
+    padding: 11px 22px;
+    background: #fff;
+    border-radius: 10px;
+    color: #7b7b7b;
+    text-decoration: none;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.filter_tags li a.active,
+.filter_tags li a:hover{
+    background: #ff3b30;
+    color: #fff;
+}
+
+/* Blog Card */
+
+.blog_listings .listing_block{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: #fff;
+    border-radius: 22px;
+    padding: 82px;
+    margin-bottom: 34px;
+}
+
+.blog_listings .listing_block .img{
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.blog_listings .listing_block .img img{
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+}
+
+/* Middle */
+
+.blog_text{
+    flex: 1;
+}
+
+.blog_text .tag{
+    display: inline-block;
+    padding: 4px 14px;
+    border: 1px solid #ff3b30;
+    border-radius: 30px;
+    color: #ff3b30;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.blog_text h2{
+    margin: 0 0 18px;
+    font-size: 28px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.blog_text h2 a{
+    color: #111;
+    text-decoration: none;
+}
+
+.blog_text h2 a:hover{
+    color: #ff3b30;
+}
+
+.blog_text > a{
+    color: #ff3b30;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.blog_text > a:hover{
+    color: #222;
+}
+
+/* Right */
+
+.authore_info{
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.blog_info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin: 0 0 22px;
+    padding-left: 18px;
+}
+
+.blog_info li{
+    font-size: 13px;
+    color: #444;
+}
+
+.avtar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avtar img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.avtar .text h3{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.avtar .text span{
+    font-size: 12px;
+    color: #777;
+}
+
+/* Pagination */
+
+.pagination_block{
+    margin-top: 35px;
+}
+
+.pagination_block ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.pagination_block ul li{
+    list-style: none;
+}
+
+.pagination_block ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    height: 34px;
+    padding: 0 12px;
+    background: #fff;
+    color: #666;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.pagination_block ul li a.active,
+.pagination_block ul li a:hover{
+    background: #ff3b30;
+    color: #fff;
+}
+
+/* Tablet */
+
+@media (max-width:991px){
+
+    .blog_listings .listing_block{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .blog_listings .listing_block .img,
+    .authore_info{
+        width: 100%;
+    }
+
+    .blog_text{
+        width: 100%;
+    }
+
+    .blog_text h2{
+        font-size: 24px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width:576px){
+
+    .articles_section{
+        padding: 60px 10px;
+    }
+
+    .articles_section .section_title h2{
+        font-size: 32px;
+    }
+
+    .filter_tags{
+        gap: 10px;
+    }
+
+    .filter_tags li a{
+        padding: 9px 16px;
+        font-size: 13px;
+    }
+
+    .blog_listings .listing_block{
+        padding: 16px;
+        gap: 18px;
+    }
+
+    .blog_text h2{
+        font-size: 20px;
+    }
+
+    .blog_info{
+        gap: 5px 14px;
+    }
+}

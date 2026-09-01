@@ -15,6 +15,7 @@ import Downloadsection from "./Components/DownloadSection";
 import Blog from "./Components/Blog";
 import Footer from "./Components/Footer";
 import AboutUS from "./Pages/AboutUS";
+import BlogList from "./Pages/BlogList";
 
 function Home() {
   return (
@@ -42,6 +43,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutUs" element={<AboutUS />} />
+         <Route path="/blog" element={<BlogList />} />
       </Routes>
       <Footer />
     </BrowserRouter>
