@@ -106,9 +106,7 @@ function FeatureCarousel() {
 function Features() {
   return (
     <section className="our_value_section home_feature white_text row_am">
-      <div className="dotes_blue">
-        <img src="/yellow_dots.png" alt="" />
-      </div>
+    
 
       <div className="container">
         <div className="section_title">
