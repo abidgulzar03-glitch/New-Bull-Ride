@@ -3,18 +3,13 @@
 ========================================= */
 
 footer {
-  background-color: var(--dark-black);
-  padding: 100px 0;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-  margin-top: 50px;
-
+  background: var(--dark-black);
   background-image: url("/blue_dotes.png");
   background-repeat: no-repeat;
   background-position: 120px -400px;
-  
+  margin-top: 50px;
+  padding: 100px 45px;
 }
-
 
 /* =========================================
    LOGO
@@ -27,7 +22,6 @@ footer .logo_side .logo {
 footer .logo_side .logo img {
   max-width: 180px;
 }
-
 
 /* =========================================
    NEWSLETTER
@@ -46,54 +40,48 @@ footer .news_letter form {
   margin-top: 20px;
 }
 
-footer .news_letter form .form-group {
+footer .news_letter .form-group {
   max-width: 430px;
   position: relative;
 }
 
-footer .news_letter form .form-group .form-control {
+footer .news_letter .form-control {
   width: 100%;
-  background-color: transparent;
+  min-height: 60px;
+  padding: 0 65px 0 20px;
+  background: transparent;
   border: 1px solid var(--bg-white);
   border-radius: 10px;
-  min-height: 60px;
   color: var(--text-white);
   font-weight: 500;
-
-  padding: 0 65px 0 20px;
 }
 
-footer .news_letter form .form-group .form-control::placeholder {
+footer .news_letter .form-control::placeholder {
   color: #aaa;
 }
 
-footer .news_letter form .form-group button {
+footer .news_letter .form-group button {
   position: absolute;
-  right: 5px;
   top: 5px;
-
-  background-color: #e63946;
-  color: var(--text-white);
-
+  right: 5px;
   width: 50px;
   height: 50px;
-
   border-radius: 10px;
+  background: #e63946;
+  color: var(--text-white);
   font-size: 20px;
-
-  transition: 0.4s all;
+  transition: 0.3s;
 }
 
-footer .news_letter form .form-group button:hover {
-  background-color: var(--bg-white);
+footer .news_letter .form-group button:hover {
+  background: var(--bg-white);
   color: #e63946;
 }
 
-footer .news_letter form .note {
+footer .news_letter .note {
   color: #7a7a7a;
   margin-top: 10px;
 }
-
 
 /* =========================================
    CONTACT
@@ -117,7 +105,6 @@ footer .contact_info li:not(:last-child)::after {
   color: var(--text-white);
 }
 
-
 /* =========================================
    SOCIAL MEDIA
 ========================================= */
@@ -127,7 +114,6 @@ footer .social_media {
   align-items: center;
   gap: 10px;
   margin-top: 20px;
-
   padding: 0;
   list-style: none;
 }
@@ -135,24 +121,19 @@ footer .social_media {
 footer .social_media li a {
   width: 35px;
   height: 35px;
-
-  border: 1px solid var(--dark-greay);
-  border-radius: 100px;
-
-  color: var(--text-white);
-
   display: block;
   text-align: center;
   line-height: 35px;
-
-  transition: 0.4s all;
+  border: 1px solid var(--dark-greay);
+  border-radius: 50%;
+  color: var(--text-white);
+  transition: 0.3s;
 }
 
 footer .social_media li a:hover {
-  background-color: var(--bg-white);
+  background: var(--bg-white);
   color: var(--dark-black);
 }
-
 
 /* =========================================
    DOWNLOAD APP
@@ -170,39 +151,28 @@ footer .download_side h3 {
 
 footer .download_side .app_btn {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-
+  align-items: center;
   margin-top: 40px;
   padding: 0;
-
   list-style: none;
-}
-
-footer .download_side .app_btn li a {
-  display: block;
-
-  padding: 15px 35px;
-
-  background-color: var(--black);
-  border: none;
-
-  position: relative;
-
-  border-radius: 12px;
-
-  transition: 0.4s all;
 }
 
 footer .download_side .app_btn li:last-child {
   margin-left: 25px;
 }
 
-footer .download_side .app_btn li a img {
-  height: 36px;
-  transition: 0.4s all;
+footer .download_side .app_btn li a {
+  display: block;
+  padding: 15px 35px;
+  background: var(--black);
+  border-radius: 12px;
+  transition: 0.3s;
 }
 
+footer .download_side .app_btn li a img {
+  height: 36px;
+}
 
 /* =========================================
    FOOTER BOTTOM
@@ -211,9 +181,7 @@ footer .download_side .app_btn li a img {
 .footer_bottom {
   max-width: 1370px;
   margin: 40px auto 0;
-
-  background-color: #111218;
-
+  background: #111218;
   border-radius: 20px;
 }
 
@@ -221,13 +189,11 @@ footer .download_side .app_btn li a img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 20px 0;
+  padding: 20px 25px;
 }
 
 .footer_bottom .ft_inner p {
   margin: 0;
-
   color: var(--greay);
   font-size: 14px;
 }
@@ -237,60 +203,43 @@ footer .download_side .app_btn li a img {
   text-decoration: underline;
 }
 
-
-/* Footer Links */
-
-.footer_bottom .ft_inner .links {
+.footer_bottom .links {
   display: flex;
-  justify-content: center;
-
   padding: 0;
   margin: 0;
-
   list-style: none;
 }
 
-.footer_bottom .ft_inner .links li a {
+.footer_bottom .links li a {
   color: var(--greay);
   text-decoration: none;
-
-  transition: 0.4s all;
+  transition: 0.3s;
 }
 
-.footer_bottom .ft_inner .links li a:hover {
+.footer_bottom .links li a:hover {
   color: var(--text-white);
 }
 
-.footer_bottom .ft_inner .links li:not(:last-child)::after {
+.footer_bottom .links li:not(:last-child)::after {
   content: "|";
-
   margin: 0 10px;
-
   color: var(--greay);
 }
 
-
 /* =========================================
    GO TOP BUTTON
-========================================= */
-
-/* =========================================
-   GO TOP BUTTON — smooth show/hide + hover polish
 ========================================= */
 
 .go_top {
   position: fixed;
   right: 30px;
   bottom: 110px;
-
-  cursor: pointer;
   z-index: 999;
-
+  cursor: pointer;
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px) scale(0.8);
-
-  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease, bottom 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .go_top.show {
@@ -302,45 +251,26 @@ footer .download_side .app_btn li a img {
 .go_top span {
   width: 50px;
   height: 50px;
-
   display: flex;
-  justify-content: center;
   align-items: center;
-
-  background-color: #e63946;
-  color: var(--text-white);
-
-  border-radius: 150px;
-  font-size: 25px;
-
-  transition: 0.3s ease;
+  justify-content: center;
+  background: #e63946;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: 0.3s;
 }
 
 .go_top:hover span {
-  background-color: #ff4d5e;
+  background: #ff4d5e;
   transform: scale(1.1);
 }
-
-.go_top:hover {
-  bottom: 120px;
-}
-
-.go_top:active span {
-  transform: scale(0.9);
-}
-
-.go_top:focus-visible span {
-  outline: 2px solid var(--text-white);
-  outline-offset: 3px;
-}
-
 
 /* =========================================
    RESPONSIVE
 ========================================= */
 
 @media (max-width: 991px) {
-
   footer {
     padding: 70px 20px;
   }
@@ -360,19 +290,9 @@ footer .download_side .app_btn li a img {
   }
 }
 
-
 @media (max-width: 767px) {
-
   footer {
-    padding: 60px 20px;
-  }
-
-  footer .logo_side {
-    text-align: left;
-  }
-
-  footer .download_side {
-    padding-top: 50px;
+    padding: 60px 15px;
   }
 
   footer .download_side .app_btn {
@@ -387,46 +307,34 @@ footer .download_side .app_btn li a img {
 
   .footer_bottom {
     margin-top: 30px;
-    padding: 0 15px;
   }
 
   .footer_bottom .ft_inner {
     flex-direction: column;
     text-align: center;
+    padding: 20px 15px;
   }
 
-  .footer_bottom .ft_inner .links {
+  .footer_bottom .links {
     flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
-  }
-
-  .footer_bottom .ft_inner .links li:not(:last-child)::after {
-    margin: 0 5px;
-  }
-
-  .footer_bottom .ft_inner .design_by {
-    margin-top: 5px;
   }
 
   .go_top {
     right: 20px;
     bottom: 30px;
   }
-
-  .go_top:hover {
-    bottom: 35px;
-  }
 }
 
-
 @media (max-width: 480px) {
-
-  footer .news_letter h3 {
+  footer .news_letter h3,
+  footer .download_side h3 {
     font-size: 22px;
   }
 
-  footer .news_letter form .form-group {
-    width: 100%;
+  footer .news_letter .form-group {
+    max-width: 100%;
   }
 
   footer .contact_info {
@@ -434,7 +342,7 @@ footer .download_side .app_btn li a img {
     gap: 10px;
   }
 
-  footer .contact_info li:not(:last-child)::after {
+  footer .contact_info li::after {
     display: none;
   }
 

@@ -17,9 +17,9 @@ function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <a href="/" className="logo" onClick={closeAll}>
+        <Link to="/" className="logo" onClick={closeAll}>
           <img src="/logo2.png" alt="Logo(2)" />
-        </a>
+        </Link>
 
         <button
           className={`menu-toggle ${menuOpen ? "active" : ""}`}
@@ -37,7 +37,7 @@ function Header() {
             <li
               className={`nav-item dropdown ${openDropdown === 0 ? "active" : ""}`}
             >
-              <a href="/">Home</a>
+              <Link to="/" onClick={closeAll}>Home</Link>
               <span
                 className="dropdown-arrow"
                 onClick={(e) => {
@@ -49,44 +49,44 @@ function Header() {
               </span>
               <ul className="dropdown-menu">
                 <li>
-                  <a href="/">Home 1</a>
+                  <Link to="/" onClick={closeAll}>Home 1</Link>
                 </li>
                 <li>
-                  <a href="/">Home 2</a>
+                  <Link to="/" onClick={closeAll}>Home 2</Link>
                 </li>
                 <li>
-                  <a href="/">Home 4</a>
+                  <Link to="/" onClick={closeAll}>Home 4</Link>
                 </li>
                 <li>
-                  <a href="/">Home 5</a>
+                  <Link to="/" onClick={closeAll}>Home 5</Link>
                 </li>
                 <li>
-                  <a href="/">Home 6</a>
+                  <Link to="/" onClick={closeAll}>Home 6</Link>
                 </li>
                 <li>
-                  <a href="/">Home 7</a>
+                  <Link to="/" onClick={closeAll}>Home 7</Link>
                 </li>
                 <li>
-                  <a href="/">Home 8</a>
-                </li>
-
-                <li>
-                  <a href="/">Home 9</a>
+                  <Link to="/" onClick={closeAll}>Home 8</Link>
                 </li>
 
                 <li>
-                  <a href="/">Home 10</a>
+                  <Link to="/" onClick={closeAll}>Home 9</Link>
+                </li>
+
+                <li>
+                  <Link to="/" onClick={closeAll}>Home 10</Link>
                 </li>
               </ul>
             </li>
 
             <li className="nav-item">
-              <Link to="/aboutUs">About Us</Link>
+              <Link to="/aboutUs" onClick={closeAll}>About Us</Link>
             </li>
             <li
               className={`nav-item dropdown ${openDropdown === 1 ? "active" : ""}`}
             >
-              <a href="/">Pages</a>
+              <Link to="/" onClick={closeAll}>Pages</Link>
               <span
                 className="dropdown-arrow"
                 onClick={(e) => {
@@ -98,33 +98,33 @@ function Header() {
               </span>
               <ul className="dropdown-menu">
                 <li>
-                     <Link to="/blog-list">Blog List</Link>
+                     <Link to="/blog-list" onClick={closeAll}>Blog List</Link>
                 </li>
                 <li>
                  
-                   <Link to="/blog-detail">Single Blog</Link>
+                   <Link to="/blog-detail" onClick={closeAll}>Single Blog</Link>
                 </li>
                 <li>
                  
-                  <Link to="/sign-in">Sign In </Link>
+                  <Link to="/sign-in" onClick={closeAll}>Sign In </Link>
 
                 </li>
                 <li>
-                 <Link to="/sign-up">Sign Up </Link>
+                 <Link to="/sign-up" onClick={closeAll}>Sign Up </Link>
                 </li>
               </ul>
             </li>
 
             <li className="nav-item">
-              <a href="/pricing">Pricing</a>
+              <Link to="/pricing" onClick={closeAll}>Pricing</Link>
             </li>
 
             <li className="nav-item">
-              <a href="/reviews">Reviews</a>
+              <Link to="/reviews" onClick={closeAll}>Reviews</Link>
             </li>
 
            <li className="nav-item">
-  <Link to="/lastblog">Blog</Link>
+  <Link to="/lastblog" onClick={closeAll}>Blog</Link>
 </li>
 
           <li className="nav-item">
@@ -135,9 +135,9 @@ function Header() {
 
             <li className="nav-item download-item">
               <div className="btn_block">
-                <a href="/contact" className="hero_btn purple_btn download-btn">
+                <Link to="/contact" className="hero_btn purple_btn download-btn" onClick={closeAll}>
                   Download
-                </a>
+                </Link>
                 <div className="btn_bottom"></div>
               </div>
             </li>

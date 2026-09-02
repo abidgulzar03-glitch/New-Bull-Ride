@@ -59,12 +59,11 @@ export default function SignIn() {
 
                 <Link to="#">Forgot password?</Link>
               </div>
-
-              <div className="btn_block">
-                <button type="submit" className="btn puprple_btn">
-                  Sign In Now
-                </button>
-              </div>
+<div className="signin_btn_block">
+  <button type="submit" className="btn puprple_btn">
+    Sign In Now
+  </button>
+</div>
 
               <button type="button" className="btn google_btn">
                 <img src="/google_G.svg" alt="google" />

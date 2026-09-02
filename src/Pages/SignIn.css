@@ -2,376 +2,354 @@
    SIGN IN PAGE
 ======================================== */
 
-.signup_section{
-    background:#f5f1e8;
-    min-height:100vh;
-    padding:150px 45px 80px;
+.signup_section {
+  background: #f5f1e8;
+  min-height: 100vh;
+  padding: 150px 45px 80px;
 }
 
-.top_part{
-    display:flex;
-    align-items:center;
-    margin-bottom:35px;
-    gap: 390px;
+.top_part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
 }
 
-.back_btn{
-    color:#111;
-    text-decoration:none;
-    font-size:15px;
-    font-weight:500;
+.back_btn {
+  color: #111;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-.back_btn i{
-    margin-right:6px;
+.back_btn i {
+  margin-right: 6px;
 }
 
-.navbar-brand img{
-    height:92px;
-    
+.navbar-brand img {
+  height: 92px;
 }
 
 /* Main Card */
 
-.form_block{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    background:#fff;
-    border-radius:26px;
-    overflow:hidden;
+.form_block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  border-radius: 26px;
+  overflow: hidden;
 }
 
 /* Left Side */
 
-.form_side{
-    padding:80px 70px;
-    background:#f8f8f8;
+.form_side {
+  padding: 80px 70px;
+  background: #f8f8f8;
 }
 
-.title_badge{
-    display:inline-block;
-    background:#4169e1;
-    color:#fff;
-    padding:6px 16px;
-    border-radius:30px;
-    font-size:13px;
-    margin-bottom:18px;
+.title_badge {
+  display: inline-block;
+  background: #4169e1;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  margin-bottom: 18px;
 }
 
-.section_title h2{
-    font-size:40px;
-    line-height:1.2;
-    font-weight:700;
-    color:#111;
-    margin-bottom:12px;
+.section_title h2 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
 }
 
-.section_title h2 span{
-    color:#4169e1;
+.section_title h2 span {
+  color: #4169e1;
 }
 
-.section_title p{
-    color:#555;
-    font-size:15px;
-    margin-bottom:40px;
+.section_title p {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 40px;
 }
 
-/* Inputs */
+/* Form */
 
-.form-group{
-    margin-bottom:22px;
+.form-group {
+  margin-bottom: 22px;
 }
 
-.form-control{
-    width:100%;
-    height:52px;
-    border:none;
-    border-bottom:1px solid #bdbdbd;
-    background:transparent;
-    padding:0;
-    font-size:15px;
-    outline:none;
-    border-radius:0;
+.form-control {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-bottom: 1px solid #bdbdbd;
+  background: transparent;
+  padding: 0;
+  font-size: 15px;
+  outline: none;
+  border-radius: 0;
 }
 
-.form-control:focus{
-    border-color:#4169e1;
+.form-control:focus {
+  border-color: #4169e1;
 }
 
-/* Remember */
-
-.forgate_check{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin:22px 0 28px;
+.forgate_check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 22px 0 28px;
 }
 
-.remember_check{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    font-size:14px;
-    color:#444;
+.remember_check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #444;
 }
 
-.forgate_check a{
-    color:#111;
-    font-size:14px;
-    text-decoration:underline;
+.forgate_check a {
+  color: #111;
+  font-size: 14px;
+  text-decoration: underline;
 }
 
 /* Buttons */
 
-.puprple_btn{
-      width: 152%;
-    height: 32px;
-    border: none;
-    border-radius: 30px;
-    background: #4169e1;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 300;
-    cursor: pointer;
-    box-shadow: 0 3px 0 #284cc9;}
-
-
-.puprple_btn:hover{
-    background:#2f56d7;
-    transform:translateY(-2px);
-   
+.signin_btn_block {
+  margin-top: 20px;
 }
 
-.puprple_btn:active{
-    transform:translateY(0);
-    box-shadow:0 4px 12px rgba(65,105,225,.25);
-}
-.google_btn{
-    width:100%;
-    height:54px;
-    margin-top:18px;
-    border:1.5px solid #222;
-    border-radius:30px;
-    background:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    font-weight:600;
-    cursor:pointer;
+.signin_btn_block .btn,
+.google_btn {
+  width: 100%;
 }
 
-.google_btn img{
-    width:20px;
+.google_btn {
+  height: 54px;
+  margin-top: 18px;
+  border: 1.5px solid #222;
+  border-radius: 30px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.sign_in_here{
-    text-align:center;
-    margin-top:22px;
-    font-size:14px;
-    color:#777;
+.google_btn img {
+  width: 20px;
 }
 
-.sign_in_here a{
-    color:#4169e1;
-    text-decoration:none;
+.sign_in_here {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 14px;
+  color: #777;
+}
+
+.sign_in_here a {
+  color: #4169e1;
+  text-decoration: none;
 }
 
 /* Right Side */
 
-.side_screen{
-    background:#0d1323;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:40px;
+.side_screen {
+  background: #0d1323;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
 
-.dotes_blue{
-    position:absolute;
-    inset:0;
-    opacity:.9;
+.dotes_blue {
+  position: absolute;
+  inset: 0;
+  opacity: 0.9;
 }
 
-.dotes_blue img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.dotes_blue img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.left_icon{
-    position:absolute;
-    left:28px;
-    bottom:110px;
-    z-index:2;
+.left_icon {
+  position: absolute;
+  left: 28px;
+  bottom: 110px;
+  z-index: 2;
 }
 
-.right_icon{
-    position:absolute;
-    right:38px;
-    top:120px;
-    z-index:2;
+.right_icon {
+  position: absolute;
+  right: 38px;
+  top: 120px;
+  z-index: 2;
 }
 
-.scrren{
-    position:relative;
-    z-index:3;
+.scrren {
+  position: relative;
+  z-index: 3;
 }
 
-.scrren img{
-    width:100%;
-    max-width:290px;
-    display:block;
+.scrren img {
+  width: 100%;
+  max-width: 290px;
+  display: block;
 }
 
-/* ===============================
+/* ========================================
    TABLET
-================================= */
-@media (max-width:991px){
+======================================== */
 
-  .signup_section{
-    padding:120px 20px 60px;
+@media (max-width: 991px) {
+  .signup_section {
+    padding: 120px 20px 60px;
   }
 
-  .top_part{
-    position:relative;
-    justify-content:center;
-    gap:0;
-    margin-bottom:30px;
+  .top_part {
+    position: relative;
+    justify-content: center;
+    margin-bottom: 30px;
   }
 
-  .back_btn{
-    position:absolute;
-    left:0;
-    font-size:14px;
+  .back_btn {
+    position: absolute;
+    left: 0;
+    font-size: 14px;
   }
 
-  .navbar-brand img{
-    height:70px;
+  .navbar-brand img {
+    height: 70px;
   }
 
-  .form_block{
-    grid-template-columns:1fr;
+  .form_block {
+    grid-template-columns: 1fr;
   }
 
-  .side_screen{
-    order:-1;
-    min-height:420px;
-    padding:35px 20px;
+  .side_screen {
+    order: -1;
+    min-height: 420px;
+    padding: 35px 20px;
   }
 
-  .form_side{
-    padding:45px 35px;
+  .form_side {
+    padding: 45px 35px;
   }
 
-  .section_title h2{
-    font-size:34px;
+  .section_title h2 {
+    font-size: 34px;
   }
 
-  .scrren img{
-    max-width:240px;
+  .scrren img {
+    max-width: 240px;
   }
 
   .left_icon,
-  .right_icon{
-    display:none;
+  .right_icon {
+    display: none;
   }
 
-  .puprple_btn{
-    width:100%;
-    height:52px;
-    font-size:15px;
-    font-weight:600;
+  .signin_btn_block .btn,
+  .google_btn {
+    height: 52px;
+    font-size: 15px;
   }
 }
 
-/* ===============================
+/* ========================================
    MOBILE
-================================= */
-@media (max-width:576px){
+======================================== */
 
-  .signup_section{
-    padding:95px 15px 40px;
+@media (max-width: 576px) {
+  .signup_section {
+    padding: 95px 15px 40px;
   }
 
-  .top_part{
-    position:relative;
-    justify-content:center;
-    margin-bottom:25px;
-    min-height:55px;
+  .top_part {
+    position: relative;
+    justify-content: center;
+    margin-bottom: 25px;
+    min-height: 55px;
   }
 
-  .back_btn{
-    position:absolute;
-    left:0;
-    font-size:13px;
+  .back_btn {
+    position: absolute;
+    left: 0;
+    font-size: 13px;
   }
 
-  .navbar-brand img{
-    height:52px;
+  .navbar-brand img {
+    height: 52px;
   }
 
-  .form_side{
-    padding:30px 20px;
+  .form_side {
+    padding: 30px 20px;
   }
 
-  .section_title h2{
-    font-size:28px;
+  .section_title h2 {
+    font-size: 28px;
   }
 
-  .section_title p{
-    font-size:15px;
-    margin-bottom:28px;
+  .section_title p {
+    margin-bottom: 28px;
   }
 
-  .form-group{
-    margin-bottom:18px;
+  .form-group {
+    margin-bottom: 18px;
   }
 
-  .form-control{
-    height:48px;
-    font-size:14px;
+  .form-control {
+    height: 48px;
+    font-size: 14px;
   }
 
-  .forgate_check{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:12px;
-    margin:18px 0 24px;
+  .forgate_check {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 18px 0 24px;
   }
 
-  .puprple_btn,
-  .google_btn{
-    width:100%;
-    height:50px;
-    font-size:14px;
+  .signin_btn_block .btn,
+  .google_btn {
+    height: 50px;
+    font-size: 14px;
   }
 
-  .google_btn img{
-    width:18px;
+  .google_btn img {
+    width: 18px;
   }
 
-  .sign_in_here{
-    margin-top:18px;
-    font-size:13px;
+  .sign_in_here {
+    margin-top: 18px;
+    font-size: 13px;
   }
 
-  .side_screen{
-    min-height:280px;
-    padding:20px;
+  .side_screen {
+    min-height: 280px;
+    padding: 20px;
   }
 
-  .scrren img{
-    max-width:180px;
+  .scrren img {
+    max-width: 180px;
   }
 
-  .dotes_blue{
-    opacity:.5;
+  .dotes_blue {
+    opacity: 0.5;
   }
 
   .left_icon,
-  .right_icon{
-    display:none;
+  .right_icon {
+    display: none;
   }
 }
