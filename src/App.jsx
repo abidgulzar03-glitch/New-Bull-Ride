@@ -24,7 +24,8 @@ import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import HeaderPricing from "./Pages/HeaderPricing";
 import HeaderReview from "./Pages/HeaderReview";
-
+import LstBlog from "./Pages/LstBlog";
+import Contact from "./Pages/Contact";
 function Home() {
   return (
     <>
@@ -59,12 +60,14 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutUs" element={<AboutUS />} />
-        <Route path="/blog" element={<BlogList />} />
+        <Route path="/blog-list" element={<BlogList />} />
         <Route path="/blog-detail" element={<BlogDetail />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/pricing" element={<HeaderPricing />} />
         <Route path="/reviews" element={<HeaderReview />} />
+        <Route path="/lastblog" element={<LstBlog />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
 
       {!hideHeader && <Footer />}

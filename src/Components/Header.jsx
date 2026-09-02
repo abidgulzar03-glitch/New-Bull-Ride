@@ -98,7 +98,7 @@ function Header() {
               </span>
               <ul className="dropdown-menu">
                 <li>
-                     <Link to="/blog">Blog List</Link>
+                     <Link to="/blog-list">Blog List</Link>
                 </li>
                 <li>
                  
@@ -116,22 +116,22 @@ function Header() {
             </li>
 
             <li className="nav-item">
-            <Link to="/pricing" onClick={closeAll}>Pricing</Link>
+              <a href="/pricing">Pricing</a>
             </li>
 
             <li className="nav-item">
-            <Link to="/reviews" className="nav-link">
-  Reviews
-</Link>
+              <a href="/reviews">Reviews</a>
             </li>
 
-            <li className="nav-item">
-              <a href="/blog">Blog</a>
-            </li>
+           <li className="nav-item">
+  <Link to="/lastblog">Blog</Link>
+</li>
 
-            <li className="nav-item">
-              <a href="/contact">Contact</a>
-            </li>
+          <li className="nav-item">
+  <Link to="/contact" onClick={closeAll}>
+    Contact
+  </Link>
+</li>
 
             <li className="nav-item download-item">
               <div className="btn_block">

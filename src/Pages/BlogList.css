@@ -6,10 +6,6 @@
   before this file, so those variables resolve correctly.
 */
 
-/* ===========================
-   RESOURCE SECTION
-=========================== */
-
 /* ========================================
    OUR RESOURCE SECTION
 ======================================== */
@@ -25,8 +21,6 @@
     align-items: center;
     gap: 50px;
 }
-
-/* Left Content */
 
 .resource_left .title_badge{
     display: inline-block;
@@ -57,8 +51,6 @@
     color: #555;
     max-width: 500px;
 }
-
-/* Right Card */
 
 .mail_block{
     position: relative;
@@ -105,8 +97,6 @@
     line-height: 1.6;
     margin-bottom: 25px;
 }
-
-/* Email Input */
 
 .input_box{
     position: relative;
@@ -155,57 +145,42 @@
     line-height: 1.5;
 }
 
-/* Tablet */
-
 @media (max-width: 991px){
-
-
-     .our_resource{
+    .our_resource{
         padding: 160px 10px;
     }
     .resource_wrapper{
         grid-template-columns: 1fr;
         gap: 30px;
     }
-
     .resource_left h2{
         font-size: 38px;
     }
-
     .mail_block{
         padding: 40px 25px;
     }
-
     .mail_content h3{
         font-size: 26px;
     }
 }
 
-/* Mobile */
-
 @media (max-width: 576px){
-
     .our_resource{
         padding: 160px 10px;
     }
-
     .resource_left h2{
         font-size: 32px;
     }
-
     .resource_left p{
         font-size: 15px;
     }
-
     .sub_text{
         font-size: 15px;
     }
-
     .input_box input{
         height: 56px;
         font-size: 15px;
     }
-
     .input_box button{
         width: 46px;
         height: 46px;
@@ -213,10 +188,6 @@
     }
 }
 
-/* ===========Articles Section Start===================== */
-/* =========================================
-   RECENT ARTICLES
-========================================= */
 /* =========================================
    RECENT ARTICLES (RED THEME)
 ========================================= */
@@ -226,8 +197,6 @@
     background: #f5f1e8;
     position: relative;
 }
-
-/* Title */
 
 .articles_section .section_title{
     text-align: left;
@@ -245,8 +214,6 @@
 .articles_section .section_title h2 span{
     color: #ff3b30;
 }
-
-/* Filter */
 
 .filter_tags{
     display: flex;
@@ -269,6 +236,7 @@
     color: #7b7b7b;
     text-decoration: none;
     font-size: 15px;
+    font-weight: 500;
     transition: .3s;
 }
 
@@ -280,31 +248,55 @@
 
 /* Blog Card */
 
+.blog_listings{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
 .blog_listings .listing_block{
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 34px;
     background: #fff;
-    border-radius: 22px;
-    padding: 82px;
-    margin-bottom: 34px;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+    transition: 0.3s all;
+}
+
+.blog_listings .listing_block:hover{
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.09);
+    transform: translateY(-3px);
 }
 
 .blog_listings .listing_block .img{
-    width: 240px;
+    width: 260px;
     flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 16px;
+    overflow: hidden;
 }
 
 .blog_listings .listing_block .img img{
     width: 100%;
+    height: 100%;
+    min-height: 190px;
+    object-fit: cover;
     border-radius: 16px;
     display: block;
+    transition: 0.4s transform;
+}
+
+.blog_listings .listing_block:hover .img img{
+    transform: scale(1.06);
 }
 
 /* Middle */
 
 .blog_text{
     flex: 1;
+    min-width: 0;
 }
 
 .blog_text .tag{
@@ -315,12 +307,12 @@
     color: #ff3b30;
     font-size: 12px;
     font-weight: 500;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .blog_text h2{
-    margin: 0 0 18px;
-    font-size: 28px;
+    margin: 0 0 16px;
+    font-size: 24px;
     line-height: 1.35;
     font-weight: 700;
 }
@@ -328,6 +320,7 @@
 .blog_text h2 a{
     color: #111;
     text-decoration: none;
+    transition: 0.25s color;
 }
 
 .blog_text h2 a:hover{
@@ -335,63 +328,82 @@
 }
 
 .blog_text > a{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     color: #ff3b30;
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
+    transition: 0.25s all;
 }
 
 .blog_text > a:hover{
     color: #222;
+    gap: 10px;
 }
 
 /* Right */
 
 .authore_info{
-    width: 200px;
+    width: 220px;
     flex-shrink: 0;
+    padding-left: 24px;
+    border-left: 1px solid #ececec;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .blog_info{
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 18px;
-    margin: 0 0 22px;
-    padding-left: 18px;
+    gap: 8px 14px;
+    padding: 0;
+    margin: 0 0 18px;
+    list-style: none;
 }
 
 .blog_info li{
     font-size: 13px;
-    color: #444;
+    color: #777;
 }
 
 .avtar{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .avtar img{
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.avtar .text{
+    display: flex;
+    flex-direction: column;
 }
 
 .avtar .text h3{
     margin: 0;
     font-size: 16px;
     font-weight: 700;
+    color: #111;
 }
 
 .avtar .text span{
-    font-size: 12px;
-    color: #777;
+    margin-top: 3px;
+    font-size: 13px;
+    color: #888;
 }
-
 /* Pagination */
 
 .pagination_block{
-    margin-top: 35px;
+    margin-top: 45px;
 }
 
 .pagination_block ul{
@@ -412,14 +424,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 34px;
-    height: 34px;
-    padding: 0 12px;
+    gap: 6px;
+    min-width: 38px;
+    height: 38px;
+    padding: 0 14px;
     background: #fff;
     color: #666;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
     font-size: 13px;
+    font-weight: 500;
     transition: .3s;
 }
 
@@ -435,20 +449,29 @@
 
     .blog_listings .listing_block{
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+        padding: 20px;
+        gap: 20px;
     }
 
-    .blog_listings .listing_block .img,
+    .blog_listings .listing_block .img{
+        width: 100%;
+    }
+
+    .blog_listings .listing_block .img img{
+        min-height: 220px;
+    }
+
     .authore_info{
         width: 100%;
-    }
-
-    .blog_text{
-        width: 100%;
+        padding-left: 0;
+        padding-top: 18px;
+        border-left: none;
+        border-top: 1px solid #eee;
     }
 
     .blog_text h2{
-        font-size: 24px;
+        font-size: 22px;
     }
 }
 
@@ -461,7 +484,7 @@
     }
 
     .articles_section .section_title h2{
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .filter_tags{
@@ -473,16 +496,48 @@
         font-size: 13px;
     }
 
+    .blog_listings{
+        gap: 20px;
+    }
+
     .blog_listings .listing_block{
         padding: 16px;
-        gap: 18px;
+        border-radius: 16px;
+    }
+
+    .blog_listings .listing_block .img img{
+        min-height: 180px;
     }
 
     .blog_text h2{
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .blog_info{
-        gap: 5px 14px;
+        gap: 5px 12px;
     }
+
+    .avtar img{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+@media (max-width:991px){
+
+  .authore_info{
+      width: 100%;
+      padding: 18px 0 0;
+      border-left: none;
+      border-top: 1px solid #ececec;
+  }
+
+  .blog_info{
+      margin-bottom: 15px;
+  }
+
+  .avtar{
+      justify-content: flex-start;
+  }
 }
