@@ -22,6 +22,7 @@ import BlogList from "./Pages/BlogList";
 import BlogDetail from "./Pages/BlogDetail";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
+import HeaderPricing from "./Pages/HeaderPricing";
 
 function Home() {
   return (
@@ -44,15 +45,16 @@ function Home() {
 function AppContent() {
   const location = useLocation();
 
-  const hideLayout =
+  const hideHeader =
     location.pathname === "/sign-in" ||
-    location.pathname === "/sign-up";
+    location.pathname === "/sign-up" 
+    
 
   return (
     <>
       <Preloader />
 
-      {!hideLayout && <Header />}
+      {!hideHeader && <Header />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -61,9 +63,10 @@ function AppContent() {
         <Route path="/blog-detail" element={<BlogDetail />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/pricing" element={<HeaderPricing />} />
       </Routes>
 
-      {!hideLayout && <Footer />}
+      <Footer />
     </>
   );
 }

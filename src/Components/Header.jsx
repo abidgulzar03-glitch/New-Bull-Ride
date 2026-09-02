@@ -116,7 +116,7 @@ function Header() {
             </li>
 
             <li className="nav-item">
-              <a href="/pricing">Pricing</a>
+            <Link to="/pricing" onClick={closeAll}>Pricing</Link>
             </li>
 
             <li className="nav-item">
