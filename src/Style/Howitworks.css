@@ -25,7 +25,7 @@
 
 .how_it_inner .dotes_blue {
   position: absolute;
-  top: -65%;
+  top: 25%;
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
