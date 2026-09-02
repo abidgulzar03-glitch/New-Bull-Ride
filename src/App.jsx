@@ -23,6 +23,7 @@ import BlogDetail from "./Pages/BlogDetail";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import HeaderPricing from "./Pages/HeaderPricing";
+import HeaderReview from "./Pages/HeaderReview";
 
 function Home() {
   return (
@@ -47,8 +48,7 @@ function AppContent() {
 
   const hideHeader =
     location.pathname === "/sign-in" ||
-    location.pathname === "/sign-up" 
-    
+    location.pathname === "/sign-up";
 
   return (
     <>
@@ -64,9 +64,10 @@ function AppContent() {
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/pricing" element={<HeaderPricing />} />
+        <Route path="/reviews" element={<HeaderReview />} />
       </Routes>
 
-      <Footer />
+      {!hideHeader && <Footer />}
     </>
   );
 }

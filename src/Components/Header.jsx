@@ -120,7 +120,9 @@ function Header() {
             </li>
 
             <li className="nav-item">
-              <a href="/reviews">Reviews</a>
+            <Link to="/reviews" className="nav-link">
+  Reviews
+</Link>
             </li>
 
             <li className="nav-item">
