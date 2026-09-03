@@ -11,16 +11,15 @@
 }
 
 .header-container {
-   width: 100%;
+  width: 100%;
   max-width: 1370px;
   margin: 0 auto;
   padding: 0 45px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: space-between;}
-
-
+  justify-content: space-between;
+}
 
 .logo {
   display: flex;
@@ -34,12 +33,9 @@
   display: block;
 }
 
-
-
 .navigation {
   display: flex;
   align-items: center;
-  
 }
 
 .nav-list {
@@ -77,24 +73,24 @@
   color: red;
 }
 
-
 .dropdown {
   display: flex;
   align-items: center;
 }
 
 .dropdown-arrow {
-    margin-left: -6px;
-    margin-right: 16px;
-    font-size: 16px;
-    color: #181a22;
-    cursor: pointer;
-    margin-top: -8px;
-    transition: 0.2s ease;
+  margin-left: -11px;
+  margin-right: 18px;
+  font-size: 17px;
+  color: #181a22;
+  cursor: pointer;
+  margin-top: -9px;
+  transition: 0.2s ease;
+  font-weight: 600;
 }
 
 .dropdown:hover .dropdown-arrow {
-  color:red;
+  color: red;
 }
 
 .dropdown-menu {
@@ -154,12 +150,7 @@
 
 .dropdown-menu li a:hover {
   color: red;
-
 }
-
-
-
-
 
 /* ========================================
    DOWNLOAD BUTTON
@@ -169,8 +160,6 @@
   display: flex;
   align-items: center;
 }
-
-
 
 /* Main red button */
 .download-item .download-btn {
@@ -199,20 +188,22 @@
   text-decoration: none;
   cursor: pointer;
 
-  transition: transform 0.25s ease, background 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
 }
 
 /* Bottom outline/shadow layer */
 .download-item .btn_bottom {
-    position: absolute;
-    width: 96%;
-    height: 96%;
-      top: 8px;
-    left: 10px;
-    border: 1px solid #ef4444;
-    border-radius: 50px;
-    background: transparent;
-    z-index: 1;
+  position: absolute;
+  width: 96%;
+  height: 96%;
+  top: 8px;
+  left: 10px;
+  border: 1px solid #ef4444;
+  border-radius: 50px;
+  background: transparent;
+  z-index: 1;
 }
 
 /* Hover */
@@ -225,7 +216,6 @@
 .download-item .download-btn:active {
   transform: translate(5px, 4px);
 }
-
 
 .menu-toggle {
   display: none;
@@ -265,7 +255,6 @@
     width: 850px;
     height: 700px;
   }
-
 
   .menu-toggle {
     display: block;

@@ -23,9 +23,11 @@ function useTypedText(words, speed = 160, pause = 1400) {
         setText(current.slice(0, text.length - 1));
       }, speed / 2);
     } else if (deleting && text.length === 0) {
-      setDeleting(false);
-      setWordIndex((i) => i + 1);
-    }
+  timeout = setTimeout(() => {
+    setDeleting(false);
+    setWordIndex((i) => (i + 1) % words.length);
+  }, 400); // pause before typing the next word
+}
 
     return () => clearTimeout(timeout);
   }, [text, deleting, wordIndex, words, speed, pause]);

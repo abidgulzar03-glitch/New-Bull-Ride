@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "../Style/Interface.css";
 
 const screens = [
@@ -75,7 +75,7 @@ function ScreenSlider() {
     scrollToPosition(newIndex + 1, true);
   };
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     const nextPosition = currentPosition + 1;
 
     setCurrentPosition(nextPosition);
@@ -84,7 +84,7 @@ function ScreenSlider() {
     scrollToPosition(nextPosition, true);
     // The loop-wrap (if we've landed on the clone) is handled by the
     // scrollend/settle logic below — no fixed timeout guessing here.
-  };
+  }, [currentPosition]);
 
   const handlePrev = () => {
     const previousPosition = currentPosition - 1;
@@ -104,7 +104,7 @@ function ScreenSlider() {
     return () => {
       clearInterval(autoSlideRef.current);
     };
-  }, [currentPosition]);
+  }, [handleNext]);
 
   // Initial position
   useEffect(() => {
