@@ -102,7 +102,7 @@ function Hero() {
         {/* Desktop Hero Image */}
         <div
           className="hero_image md_screen"
-       
+  
         >
           <img src="/hero-image.png" alt="Hero" />
         </div>
@@ -113,7 +113,7 @@ function Hero() {
      
         >
           <img
-            src="/hero-image-mobile.png"
+            src="/hero-image-mob.png"
             alt="Hero mobile"
            
           />
