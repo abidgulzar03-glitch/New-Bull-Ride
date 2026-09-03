@@ -178,6 +178,23 @@ export default function Contact() {
                     <option value="">Country</option>
                     <option value="India">India</option>
                     <option value="USA">USA</option>
+
+<option value="United Kingdom">United Kingdom</option>
+<option value="Canada">Canada</option>
+<option value="Australia">Australia</option>
+<option value="Germany">Germany</option>
+<option value="France">France</option>
+<option value="Japan">Japan</option>
+<option value="China">China</option>
+<option value="Brazil">Brazil</option>
+<option value="Mexico">Mexico</option>
+<option value="Italy">Italy</option>
+<option value="Spain">Spain</option>
+<option value="South Korea">South Korea</option>
+<option value="Singapore">Singapore</option>
+<option value="United Arab Emirates">United Arab Emirates</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+     
                   </select>
                   {errors.country && (
                     <p className="error">{errors.country}</p>
