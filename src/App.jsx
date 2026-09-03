@@ -4,7 +4,6 @@ import "./App.css";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Preloader from "./Components/PreLoader";
-
 import Hero from "./Components/Hero";
 import Features from "./Components/Features";
 import HeroAbout from "./Components/HeroAbout";
@@ -26,6 +25,7 @@ import HeaderPricing from "./Pages/HeaderPricing";
 import HeaderReview from "./Pages/HeaderReview";
 import LstBlog from "./Pages/LstBlog";
 import Contact from "./Pages/Contact";
+
 function Home() {
   return (
     <>
