@@ -19,6 +19,11 @@ function Header() {
       <div className="header-container">
         <Link to="/" className="logo" onClick={closeAll}>
           <img src="/logo2.png" alt="Logo(2)" />
+          <span className="br-logo__word">
+            Bull
+            <span className="br-em">R</span>
+            ide
+          </span>
         </Link>
 
         <button
